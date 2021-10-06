@@ -1,5 +1,5 @@
 provider "aws"{
-  region = "us-east-1"
+  region = "us-east-2"
 }
 resource "aws_vpc" "myvpc" {
   cidr_block = "10.0.0.0/24"
@@ -52,7 +52,7 @@ tags = {
 }
 
 resource "aws_instance" "newinstance" {
-  ami= "ami-087c17d1fe0178315" # us-west-2
+  ami= "ami-00dfe2c7ce89a450b" # us-west-2
   instance_type = "t2.micro"
 
   network_interface {
